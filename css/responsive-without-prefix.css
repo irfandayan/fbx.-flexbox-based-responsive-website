@@ -1,0 +1,443 @@
+
+/* Extra Large Devices (Desktops) */
+@media (min-width: 1950px) {
+    html {
+       font-size: 75.5%;
+    }
+}
+
+/* - Between large devices & extra large devices normal style will be  applied.
+   - Normal style range is 1201px - 1949px
+*/
+
+/* Large Devices (Desktops & Laptops) */
+@media (max-width: 1200px) {
+    
+    html {
+        font-size: 60%;
+    }
+
+    /* Navigation */
+    .navigation__box {
+        padding: 4.5rem 6rem;
+    }
+}
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+@media (max-width: 992px) {
+    
+    html {
+        font-size: 58%;
+    }
+
+    .navigation__link {
+        font-size: 2.2rem;
+    }
+}
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+@media (max-width: 768px) {
+    
+    html {
+        font-size: 56%;
+    }
+    
+    /* Utility */
+    .u-line-bottom::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .u-padding-medium {
+        padding: 6rem 0 !important;
+    }
+
+    .u-padding-big {
+        padding: 10rem 0 !important;
+    }
+
+    .heading-2__text {
+        font-size: 3.5rem;
+    }
+
+    .heading-2__text--small {
+        font-size: 1.75rem;
+    }
+
+    .heading-title-box > .heading-title {
+        flex: 0 0 75%;
+    }
+
+    /* Features */
+    .features-box {
+        /* Note: flex-wrap along with 100% baise is an alternate 
+        but recommend way is flex direction with column */
+       /*  flex-wrap: wrap; */
+       flex-direction: column;
+    }
+     
+    .feature-item {
+        /* flex: 0 0 100%;
+        max-width: 100%; */
+        margin: 0 0 4rem 0;
+    }
+
+    .feature-item::after {
+        display: none;
+    }
+
+    /* Facts */
+    .facts-box {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .facts-desc {
+        /* flex: 0 0 100%;
+        max-width: 100%; */
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    /* About */
+    .about-box {
+       /*  padding: 0 3rem; */
+    }
+
+    .about-left__text {
+        font-size: 1.7rem;
+    }
+
+    /* Portofolio */
+    /* .gallery__item {
+        flex: 0 0 49%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto; 
+    } */
+
+    /* More Features */
+    .more-features-content {
+       /*  flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .more-features__left, 
+    .more-features__middle,
+    .more-features__right {
+        /* flex: 0 0 100%;
+        max-width: 100%; */
+    }
+
+    .more-features__item-box {
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+    }
+
+    .more-features__item-desc {
+        text-align: center !important;
+    }
+
+   .more-features__item-icon {
+        margin: 0 auto 1.5rem auto !important;;
+    }
+
+    .more-features__right > .more-features__item-box {
+        flex-direction: column;
+    }
+
+    /* Pricing */
+    .pricing-tables {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .pricing-table {
+        /* flex: 0 0 100%; 
+        margin-left: auto;
+        margin-right: auto;
+        */
+    }
+
+    /* Testimonial */
+    .testimonial__quote {
+        font-size: 2.5rem;
+    }
+
+    /* Team */
+    .team-members {
+        flex-wrap: wrap;
+    }
+
+    .team-member {
+        flex: 0 0 50%;
+        margin-top: 6rem;
+    }
+
+    .team-member__designation {
+        font-size: 1.5rem;
+    }
+    
+    /* Client */
+    .clients-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .client {
+        flex: 0 0 40%;
+    }
+
+    /* Blog */
+    .blog-box {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .blog-left,
+    .blog-right  {
+       /*  flex: 0 0 100%; */
+    }
+
+    /* Contact */
+
+    .contact-content {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .contact-box {
+        text-align: center;
+    }
+
+    .contact-left,
+    .contact-right {
+        /* flex: 0 0 100%;
+        max-width: 100%; */
+    }
+
+    .contact-social {
+        justify-content: center;
+    }
+
+    .navigation__box {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    /* Generic font size */
+    .heading-title__text,
+    .feature-item__text,
+    .facts-desc__text,
+    .more-features__item-text,
+    .pricing-table__text,
+    .contact-left__text,
+    .contact-info,
+    .footer__copyright-text {
+        font-size: 1.5rem;
+    }
+
+
+    /* Navigation */
+   /*  .navigation__checkbox:checked ~ .navigation__inner {
+        width: 100vw;
+    } */
+    
+}
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 576px) {
+    
+    html {
+        font-size: 54%;
+    }
+    /* Utility */
+    /* .u-hr-narrow {
+        width: 20%;
+    } */
+
+    
+
+    /* Facts */
+    .facts-stats-box {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .fact-item {
+        /* flex: 0 0 100%;
+        max-width: 100%; 
+        margin-bottom: 6rem;*/
+    }
+
+    .fact-item:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+
+    /* About */
+    .about-box {
+        /* flex-wrap: wrap; */
+        /* Flex direction with column requires order -1 but column reverse does not*/
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+    }
+
+    .about-left,
+    .about-right {
+       /*  flex: 0 0 100%;
+        max-width: 100%; */
+    }
+
+    .about-right {
+        /* Related to flex-direction: column; */
+        /* order: -1; */
+        margin-bottom: 6.5rem;
+        
+    }
+
+    .about-left {
+        /* OR - with above 
+        Related to flex-direction: column; */
+        /* order: 1; */
+        text-align: center;
+    }
+
+    /* Testimonial */
+    .testimonial__quote {
+        font-size: 2rem;
+    }
+
+    /* Team */
+    .team-member {
+       /*  flex: 0 0 100%;
+        margin-top: 6rem; */
+    }
+
+    /* Client */
+    .client {
+       /*  flex: 0 0 100%; */
+    }
+
+    .navigation__checkbox:checked ~ .navigation__inner {
+        width: 50vw;
+    }
+
+}
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 480px) {
+    
+    html {
+        font-size: 50%;
+    }
+
+    /* Logo */
+    .site-logo {
+        top: 5.5rem;
+        left: 5.5rem;
+    }
+
+    .heading-1__text {
+        font-size: 4rem;
+    }
+
+    .heading-2__text {
+        font-size: 3.2rem;
+    }
+
+    .heading-2__text--small {
+        font-size: 1.7rem;
+    }
+
+    .heading-title-box > .heading-title {
+        flex: 0 0 90%;
+    }
+
+    /* Button */
+    .btn,
+    .btn:link,
+    .btn:visited {
+        padding: 1.5rem 3.5rem;
+    }
+
+
+   /* Portofolio */
+   .gallery {
+       /* flex-wrap: wrap; */
+      /*  flex-direction: column; */
+   }
+
+    .gallery__item {
+        flex: 0 0 92%;
+        max-width: 100%;
+        margin: 4%;
+    }
+
+    /* Team */
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+       /*  flex: 0 0 100%; */
+    }
+
+    /* Navigation Button */
+    .navigation__btn-open {
+        top: 5.5rem;
+        right: 5.5rem;
+    }
+
+    .navigation__checkbox:checked ~ .navigation__inner {
+        width: 100vw;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones & Smaller Devices) */
+@media (max-width: 320px) {
+    
+    html {
+        font-size: 45%;
+    }
+
+    /* Testimonial */
+    .testimonial__quote {
+        font-size: 1.5rem;
+    }
+
+    /* Client */
+    .clients-logos {
+        flex-direction: column;
+    }
+
+    /* Contact */
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    /* Generic font size */
+    .heading-title__text,
+    .feature-item__text,
+    .facts-desc__text,
+    .more-features__item-text,
+    .pricing-table__text,
+    .contact-left__text,
+    .contact-info,
+    .footer__copyright-text {
+        font-size: 1.7rem;
+    }
+}
+
+
+
+/*
+https://forum.webflow.com/t/svgs-not-showing-on-apple-mobile-devices/3983
+https://discussions.apple.com/thread/6678239
+https://stackoverflow.com/questions/4504942/mobile-safari-svg-problem
+https://www.smashingmagazine.com/2016/05/safari-svg-sprite-bug/
+
+*/

@@ -1,0 +1,219 @@
+HEADER:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+SVG:
+Check reference for embedding SVG with external fonts using Object
+<!-- img does not render svg with external fonts -->    
+<!-- <img src="img/logo-1.svg" alt="logo" class="site-logo__svg"> -->
+
+
+
+FEATURES
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+-feature box: 
+
+Method: 2
+==========
+justify-content: space-around (Does not create 3 equal columns becuase of content)
+
+--feature item:
+
+Method: 1
+==========
+flex: 0 0 33.333333%; (Create 3 equal columns - BS4 way)
+
+Method: 3
+==========
+flex: 1; (Create 3 equal columns - Recommended way)
+
+
+FACTS:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+-facts box:
+
+Method: 1
+==========
+--facts description:
+flex: 0 0 41.666666%; (Create column as per BS4 grid)
+
+-- facts stats box
+flex: 0 0 58.333333% (Create column as per BS4 Grid)
+
+Above method creates 2 columns as per their %. BS4 grid way
+
+Method: 2
+==========
+--facts description:
+flex: 0 0 40% (Create column which is 40% of parent)
+
+-- facts stats box
+flex: 1; (By setting flex 1 gets all the available space next to facts description)
+
+Above method is RECOMMENDED way - Used in Trillo projects
+
+Method: 3
+==========
+
+--facts description:
+flex: 1; (Grow 1 time of available space)
+
+-- facts stats box
+flex: 2; (Grow 2 times of available space)
+
+Above method also creates 2 columns but i needed more sapce for facts description therefore i didn't go this way:
+Ref: https://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+
+
+FACTS STATS:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+-fact stats box:
+
+Method: 2
+==========
+justify-content: space-around; (Setting justify-content: space-around to parent(facts-stats-box) will create 3 equal columns - NOT RECOMMENDED)
+
+--fact item:
+
+Method: 1
+==========
+flex: 0 0 33.333333%; (Create 3 equal columns - BS4 way)
+
+
+Method: 3
+==========
+flex: 1; (Create 3 equal columns - Recommended way)
+
+Ref: http://geniuscarrier.com/2-columns-layout-with-flexbox/
+
+
+
+ABOUT:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+
+--about-left, about-right:
+
+Method: 1
+==========
+flex: 1 (Creates 2 equal columns )
+
+Ref: http://geniuscarrier.com/2-columns-layout-with-flexbox/
+
+flex: 50% (Creates 2 equal columns - NOT Recommended)
+
+Ref: https://www.w3schools.com/howto/howto_css_two_columns.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_flex
+
+
+
+
+PORTFOLIO:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+PLUS SIGN:
+
+.gallery__photo-link {
+    height: 7rem;
+    width: 7rem;
+    text-decoration: none;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gallery__photo-link::after {
+    width: 6rem;
+    height: .2rem;
+    content: "";
+    background-color: var(--color-white);
+     position: absolute;
+   /* Ref: Setting just after element with position absolute (+ inside Flex container) center after element.
+      Above is unknow behaviour with flex container */
+ }
+
+Ref: https://developers.google.com/web/updates/2016/06/absolute-positioned-children
+https://www.w3.org/TR/css-flexbox-1/#abspos-items
+https://medium.com/dev-channel/flexbox-gets-new-behavior-for-absolute-positioned-children-ca73b59f2063
+https://www.w3.org/Style/CSS/Tracker/issues/138
+
+
+CLOSE BUTTON:
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+<a class="popup__close" href="#portfolio"></a>
+
+.popup__close {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background: var(--color-white);
+    text-decoration: none;
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    transition: .5s ease-in-out;
+}
+
+.popup__close::before,
+.popup__close::after  {
+    content: "";
+    display: block;
+    height: 3rem;
+    width: .1rem;
+    background: var(--color-black);
+    position: absolute;
+    left: 2.6rem;
+    top: 1rem;
+}
+
+.popup__close::before {
+    transform:rotate(45deg);
+}
+
+.popup__close::after {
+    transform:rotate(-45deg);
+}
+
+.popup:target .popup__close {
+    top: 0;
+}
+
+I recommend using <a class="popup__close" href="#portfolio">&times;</a>
+
+.popup__close {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.25;
+    text-decoration: none;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    transition: .5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
